@@ -11,4 +11,6 @@
 [https://dacon.io/competitions/official/235720/codeshare/2914?page=1&dtype=recent](https://dacon.io/competitions/official/235720/codeshare/2914?page=1&dtype=recent)
 
 
-**지금 2.6대 나온 거는 토치 버전이 1.9.0입니당**
+**requirement.txt**
+pytorch--1.9.0
+
