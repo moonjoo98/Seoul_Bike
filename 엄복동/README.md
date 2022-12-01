@@ -4,7 +4,7 @@
 2. 추가적으로 HP-filter에 활용되는 lambda값에 따라 결과값이 상이해지기 때문에 최적의 lambda를 찾아야함(현재는 6000이 최적)
 3. 결과를 제출하기 전 지역별 최대, 최소, 평균 등을 활용하여 best output과 비교하면서 제출하는 것을 권장
 
-**requirement.txt(버전 단일화)**
+### requirement.txt(버전 단일화)
 
 pytorch--1.9.0\
 python--3.7.6(코랩 버전 그대로 활용하면 됨)
