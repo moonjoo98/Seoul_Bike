@@ -49,15 +49,29 @@ stationarity, 데이터가 정상성을 가진다는 의미는 데이터의 평�
 
 
 ### 4. Model
-LTSF-Linear는 일련의 선형 모델입니다.
+##### LTSF-Linear
 
+##### 설명
 선형: 단층 선형 모델이지만 트랜스포머보다 성능이 뛰어납니다.
 NLinear: 데이터 세트에 분포 이동이 있을 때 Linear의 성능을 향상시키기 위해 NLinear는 먼저 시퀀스의 마지막 값으로 입력을 뺍니다. 그런 다음 입력은 선형 레이어를 통과하고 최종 예측을 하기 전에 뺀 부분이 다시 추가됩니다. NLinear의 뺄셈과 덧셈은 입력 시퀀스에 대한 간단한 정규화입니다.
 DLinear: Autoformer 및 FEDformer에서 사용되는 분해 방식을 선형 레이어와 조합한 것입니다. 먼저 이동 평균 커널과 나머지(계절) 구성 요소에 의해 원시 데이터 입력을 추세 구성 요소로 분해합니다. 그런 다음 두 개의 단일 레이어 선형 레이어를 각 구성 요소에 적용하고 두 기능을 합산하여 최종 예측을 얻습니다. 추세를 명시적으로 처리함으로써 DLinear는 데이터에 명확한 추세가 있을 때 바닐라 선형의 성능을 향상시킵니다.
 LTSF-Linear는 단순하지만 다음과 같은 몇 가지 매력적인 특징이 있습니다.
 
-O(1) 최대 신호 통과 경로 길이: 경로가 짧을수록 종속성이 더 잘 캡처되므로 LTSF-Linear는 단거리 및 장거리 시간 관계를 모두 캡처할 수 있습니다.
+##### 장점
+최대 신호 통과 경로 길이: 경로가 짧을수록 종속성이 더 잘 캡처되므로 LTSF-Linear는 단거리 및 장거리 시간 관계를 모두 캡처할 수 있습니다.
 고효율: 각 브랜치에 하나의 선형 레이어만 있기 때문에 기존 트랜스포머보다 메모리 비용이 훨씬 적고 매개변수가 적으며 추론 속도가 빠릅니다.
 해석 가능성: 학습 후 가중치를 시각화하여 예측 값에 대한 통찰력을 얻을 수 있습니다.
 사용하기 쉬움: LTSF-Linear는 모델 하이퍼 매개변수를 튜닝하지 않고도 쉽게 얻을 수 있습니다.
 https://github.com/cure-lab/ltsf-linear
+
+##### Latent ODE
+Neural ODEs(2018)에 기반한 시계열 생성 모형.
+
+##### Overview
+Latent ODEs with ODE-RNN은 Time-series의 hidden state간 변화를 continuous-depth로 모델링한다. 이를 토대로 주어진 sample의 continuous dynamics와 latent trajectory를 학습할 수 있다. 본 연구는 제안한 방법론을 통해 continuous latent trajectory를 학습해, 기존 RNN보다 irregular sampled time-series에 대해 prediction, extrapolation에서 높은 성능을 보여준다.
+1) 과제에서 주어진 시계열 샘플의 time-gaps가 중요하거나, missing value가 많을 때
+2) 과제에서 주어진 데이터 샘플들의 latent function이 초기 조건(first hidden state in time-series)을 바탕으로 deterministic할 때(time-invariant할 때)
+3) 과제의 목표가 Physics와 같이 주어진 샘플의 내재한 dynamics를 학습하는 것일 때
+##### 4) 과제의 목표가 긴 시점의 time-series를 extrapolation일 때 <- 우리 task
+
+http://dsba.korea.ac.kr/seminar/?mod=document&uid=2568
