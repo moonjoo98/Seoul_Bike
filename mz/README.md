@@ -53,7 +53,8 @@ stationarity, 데이터가 정상성을 가진다는 의미는 데이터의 평�
 
 ##### darts 
 - darts 는 시계열을 쉽게 조작하고 예측할 수 있는 Python 라이브러리입니다. 여기에는 ARIMA와 같은 고전 모델부터 심층 신경망에 이르기까지 다양한 모델이 포함되어 있습니다. 모든 모델은 scikit-learn과 유사한 fit()및 기능 을 사용하여 동일한 방식으로 사용할 수 있습니다 . predict()또한 이 라이브러리를 사용하면 모델을 쉽게 백테스트하고 여러 모델의 예측을 결합하고 외부 데이터를 고려할 수 있습니다. Darts는 단변량 및 다변량 시계열과 모델을 모두 지원합니다. ML 기반 모델은 여러 시계열이 포함된 잠재적으로 큰 데이터 세트에서 훈련될 수 있으며 일부 모델은 확률적 예측을 위한 풍부한 지원을 제공합니다.
-https://github.com/unit8co/darts
+- 코드 주소 https://github.com/unit8co/darts
+- 논문 주소 https://www.jmlr.org/papers/volume23/21-1177/21-1177.pdf
 ##### LTSF-Linear(darts)
 
 ##### 설명
