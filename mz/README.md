@@ -47,6 +47,8 @@ stationarity, 데이터가 정상성을 가진다는 의미는 데이터의 평�
 ##### VAR 등 모델에 적용하기 위해서는 시계열 변수가 모두 stationay 상태이어야 한다. 
 -> p-value값을 비교해보면서 차분을 취하고 staionarity상태가 되도록 할 필요가 있음. 이 후 예측을 진행한 뒤에는 차분(diffencing)에 대한 모델에 대한 것이라는 점을 유념해야 하며 차분을 더하여 우리가 예측해야 할 값으로 만들어줘야함.
 
+##### 날짜 encoding
+https://github.com/erykml/nvidia_articles/blob/main/three_approaches_to_encoding_time_information_as_features_for_ml_models.ipynb
 
 ### 4. Model
 ![image](https://user-images.githubusercontent.com/103553532/205504220-8b9ad042-5012-4698-8f4c-ec3bd054c0b4.png)
