@@ -45,6 +45,6 @@
 3. 외부 데이터 (Ex. 서울시 유동인구, 서울시 대중교통 데이터, 시간대 별 교통 혼잡도 등)
 
 # Result
-Public - 26th
-Private = 21th (상위 10%)
+Public - 26th </br>
+Private - 21th (상위 10%)
 
